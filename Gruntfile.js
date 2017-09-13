@@ -97,7 +97,7 @@ module.exports = function(grunt) {
 });
 
     // ============= // CREATE TASKS ========== //
-    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin','htmlmin','copy:html', 'useminPrepare','usemin']);
+    grunt.registerTask('default', ['clean','jshint', 'uglify', 'cssmin','htmlmin','copy:html', 'useminPrepare','usemin']);
     // ===========================================================================
     // LOAD GRUNT PLUGINS ========================================================
     // ===========================================================================
