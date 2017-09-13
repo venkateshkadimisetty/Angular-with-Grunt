@@ -19,6 +19,7 @@
     "grunt-contrib-htmlmin":"latest",
     "grunt-usemin": "latest",
     "grunt-contrib-copy": "latest",
-    "grunt-contrib-clean":"latest"
+    "grunt-contrib-clean":"latest",
+    "grunt-express":"latest"
   }
 }

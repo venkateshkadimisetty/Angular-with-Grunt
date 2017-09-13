@@ -93,11 +93,22 @@ module.exports = function(grunt) {
                 src: './index.html', dest: 'dist/index.html'
             }
         },
-        clean: ["dist"]
+        clean: ["dist"],
+        express:{
+            all:{
+                options:{
+                    port:3000,
+                    hostname:'localhost',
+                    bases:['./dist'],
+                    livereload:true
+                }
+            }
+        }
 });
 
     // ============= // CREATE TASKS ========== //
     grunt.registerTask('default', ['clean','jshint', 'uglify', 'cssmin','htmlmin','copy:html', 'useminPrepare','usemin']);
+    grunt.registerTask('server',['express','watch']);
     // ===========================================================================
     // LOAD GRUNT PLUGINS ========================================================
     // ===========================================================================
@@ -112,4 +123,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-usemin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-express');
 };
